@@ -24,4 +24,6 @@
 
 | Результат | Вклад | Проверяемый след |
 | --- | --- | --- |
-| ... | ... | ... |
+| SR  | SR-8 | [Коммит](https://github.com/Omeba/RBPOrepo/commit/889c25f63c7c141bddc530731a4b59ee8f556daf) |
+|  T  | T-6, T-7 | [Коммит](https://github.com/Omeba/RBPOrepo/commit/889c25f63c7c141bddc530731a4b59ee8f556daf) |
+|  D  | D-02 | [Коммит](https://github.com/Omeba/RBPOrepo/commit/9d25cf0ee533a93ed94208eac6d5975574a81fe5) |
