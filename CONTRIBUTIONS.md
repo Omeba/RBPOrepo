@@ -18,9 +18,9 @@
 
 | Результат | Вклад | Проверяемый след |
 | --- | --- | --- |
-| Код прототипа | Нанейронил код прототипа | [Коммит](c5bb3207fb81c9562c031a5d589f4249f0218ad9) |
-|  T  | T-4, T-5 | [Коммит](88f268e6e1d7bfaaa57be3afbd0353a729e0b7f7) |
-|  D  | D-03 | [Коммит](1e4af42b5ee6887bba64584c23d25ff77e8c3d84) |
+| Код прототипа | Нанейронил код прототипа | [Коммит](https://github.com/Omeba/RBPOrepo/commit/c5bb3207fb81c9562c031a5d589f4249f0218ad9) |
+|  T  | T-4, T-5 | [Коммит](https://github.com/Omeba/RBPOrepo/commit/88f268e6e1d7bfaaa57be3afbd0353a729e0b7f7) |
+|  D  | D-03 | [Коммит](https://github.com/Omeba/RBPOrepo/commit/1e4af42b5ee6887bba64584c23d25ff77e8c3d84) |
 
 ## M3
 
