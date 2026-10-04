@@ -1,0 +1,3 @@
+{% extends 'forum/base.html' %}
+{% block title %}{{ title }} · humAIn{% endblock %}
+{% block content %}<h1>{{ title }}</h1><form method="post" autocomplete="off">{% csrf_token %}{{ form.as_p }}<button>Отправить</button></form>{% endblock %}

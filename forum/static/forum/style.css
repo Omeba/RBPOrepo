@@ -1,0 +1,8 @@
+body { max-width: 960px; margin: 2rem auto; padding: 0 1rem; font: 16px/1.5 system-ui, sans-serif; color: #17202a; }
+header { border-bottom: 1px solid #ccc; padding-bottom: 1rem; }
+nav { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+a { color: #214fc0; } article { padding: 1rem 0; border-bottom: 1px solid #ddd; }
+label { display: block; } input, textarea, select { box-sizing: border-box; max-width: 100%; padding: .5rem; }
+textarea { width: 100%; } button { padding: .5rem .8rem; cursor: pointer; }
+.inline { display: inline; } .tag { background: #eee; padding: .2rem .5rem; }
+.text { overflow-wrap: anywhere; } .errorlist { color: #a00000; }

@@ -1,0 +1,8 @@
+{% extends 'forum/base.html' %}
+{% block content %}<h1>Обсуждения</h1><form method="get">{{ form.as_p }}<button>Найти</button></form>
+<p>Сначала больше совпавших тегов; при равенстве — активность с учётом возраста обсуждения. Без тегов показаны все обсуждения.</p>
+{% for topic in page_obj %}<article><h2><a href="{% url 'topic' topic.pk %}">{{ topic.title }}</a></h2>
+<p>{{ topic.author.username }} · {{ topic.created_at }} · сообщений: {{ topic.message_count }} · совпало тегов: {{ topic.matched_tags }}</p>
+<p>{% for tag in topic.tags.all %}<span class="tag">{{ tag.name }}</span> {% endfor %}</p></article>
+{% empty %}<p>Обсуждения не найдены.</p>{% endfor %}
+{% include 'forum/pagination.html' %}{% endblock %}

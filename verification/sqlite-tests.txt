@@ -1,0 +1,77 @@
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+Found 44 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: messages, staticfiles
+  Apply all migrations: auth, contenttypes, forum, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0001_initial... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying forum.0001_initial... OK
+  Applying forum.0002_content_lock... OK
+  Applying sessions.0001_initial...test_author_account_role_forgery_rejected (forum.tests.ForumTests.test_author_account_role_forgery_rejected) ... ok
+test_cascade_cannot_remove_other_moderator_message (forum.tests.ForumTests.test_cascade_cannot_remove_other_moderator_message) ... ok
+test_credential_change_transaction_rolls_back (forum.tests.ForumTests.test_credential_change_transaction_rolls_back) ... ok
+test_credentials_change_revokes_both_sessions_and_preserves_role_author (forum.tests.ForumTests.test_credentials_change_revokes_both_sessions_and_preserves_role_author) ... ok
+test_csrf_enforced_for_all_mutations (forum.tests.ForumTests.test_csrf_enforced_for_all_mutations) ... ok
+test_end_to_end_create_search_reply_delete (forum.tests.ForumTests.test_end_to_end_create_search_reply_delete) ... ok
+test_expired_session_cannot_mutate (forum.tests.ForumTests.test_expired_session_cannot_mutate) ... ok
+test_failed_snapshot_rolls_back_content_change (forum.tests.ForumTests.test_failed_snapshot_rolls_back_content_change) ... ok
+test_get_deletion_logout_and_edit_routes_do_not_mutate (forum.tests.ForumTests.test_get_deletion_logout_and_edit_routes_do_not_mutate) ... ok
+test_guest_cannot_mutate_any_content (forum.tests.ForumTests.test_guest_cannot_mutate_any_content) ... ok
+test_history_has_no_passwords_and_does_not_restore_credentials (forum.tests.ForumTests.test_history_has_no_passwords_and_does_not_restore_credentials) ... ok
+test_history_keeps_multiple_states_and_undoes_restore (forum.tests.ForumTests.test_history_keeps_multiple_states_and_undoes_restore) ... ok
+test_history_restores_deleted_topic_messages_tags_dates_and_authorship (forum.tests.ForumTests.test_history_restores_deleted_topic_messages_tags_dates_and_authorship) ... ok
+test_invalid_credential_change_keeps_data_and_session (forum.tests.ForumTests.test_invalid_credential_change_keeps_data_and_session) ... ok
+test_invalid_login_and_inactive_account (forum.tests.ForumTests.test_invalid_login_and_inactive_account) ... ok
+test_last_tag_deletion_forbidden_but_redundant_tag_allowed (forum.tests.ForumTests.test_last_tag_deletion_forbidden_but_redundant_tag_allowed) ... ok
+test_logout_invalidates_session_and_prevents_replay (forum.tests.ForumTests.test_logout_invalidates_session_and_prevents_replay) ... ok
+test_member_cannot_delete_others_objects (forum.tests.ForumTests.test_member_cannot_delete_others_objects) ... ok
+test_member_cannot_manage_tags (forum.tests.ForumTests.test_member_cannot_manage_tags) ... ok
+test_message_rejects_blank_and_missing_topic (forum.tests.ForumTests.test_message_rejects_blank_and_missing_topic) ... ok
+test_moderator_can_delete_own_objects (forum.tests.ForumTests.test_moderator_can_delete_own_objects) ... ok
+test_moderator_cannot_delete_other_moderator_objects (forum.tests.ForumTests.test_moderator_cannot_delete_other_moderator_objects) ... ok
+test_moderator_deletes_member_content (forum.tests.ForumTests.test_moderator_deletes_member_content) ... ok
+test_owner_deletes_topic_and_all_member_messages (forum.tests.ForumTests.test_owner_deletes_topic_and_all_member_messages) ... ok
+test_password_only_change (forum.tests.ForumTests.test_password_only_change) ... ok
+test_public_pages_and_health (forum.tests.ForumTests.test_public_pages_and_health) ... ok
+test_registration_hashes_password_and_assigns_member (forum.tests.ForumTests.test_registration_hashes_password_and_assigns_member) ... ok
+test_registration_rejects_role_forgery (forum.tests.ForumTests.test_registration_rejects_role_forgery) ... ok
+test_registration_rejects_weak_mismatched_and_duplicate_credentials (forum.tests.ForumTests.test_registration_rejects_weak_mismatched_and_duplicate_credentials) ... ok
+test_role_change_operator_command_revokes_sessions (forum.tests.ForumTests.test_role_change_operator_command_revokes_sessions) ... ok
+test_search_counts_distinct_tags_messages_and_orders_matches_first (forum.tests.ForumTests.test_search_counts_distinct_tags_messages_and_orders_matches_first) ... ok
+test_search_invalid_tag_rejected (forum.tests.ForumTests.test_search_invalid_tag_rejected) ... ok
+test_search_tiebreak_uses_age_and_activity (forum.tests.ForumTests.test_search_tiebreak_uses_age_and_activity) ... ok
+test_session_has_no_credentials_and_absolute_seven_day_expiry (forum.tests.ForumTests.test_session_has_no_credentials_and_absolute_seven_day_expiry) ... ok
+test_tag_create_and_case_insensitive_duplicate (forum.tests.ForumTests.test_tag_create_and_case_insensitive_duplicate) ... ok
+test_text_is_escaped_not_executed (forum.tests.ForumTests.test_text_is_escaped_not_executed) ... ok
+test_top_three_and_countdown (forum.tests.ForumTests.test_top_three_and_countdown) ... ok
+test_topic_requires_valid_tag_and_nonblank_text (forum.tests.ForumTests.test_topic_requires_valid_tag_and_nonblank_text) ... ok
+test_unsupported_json_cannot_bypass_field_validation (forum.tests.ForumTests.test_unsupported_json_cannot_bypass_field_validation) ... ok
+test_username_only_change_revokes_sessions (forum.tests.ForumTests.test_username_only_change_revokes_sessions) ... ok
+test_login_racing_password_change_never_retains_old_access (forum.test_concurrency.ConcurrencyTests.test_login_racing_password_change_never_retains_old_access) ... skipped 'Row-lock races require PostgreSQL'
+test_parallel_creations_have_contiguous_history (forum.test_concurrency.ConcurrencyTests.test_parallel_creations_have_contiguous_history) ... skipped 'Row-lock races require PostgreSQL'
+test_parallel_tag_deletions_leave_one_tag (forum.test_concurrency.ConcurrencyTests.test_parallel_tag_deletions_leave_one_tag) ... skipped 'Row-lock races require PostgreSQL'
+test_two_old_version_changes_only_one_succeeds (forum.test_concurrency.ConcurrencyTests.test_two_old_version_changes_only_one_succeeds) ... skipped 'Row-lock races require PostgreSQL'
+
+----------------------------------------------------------------------
+Ran 44 tests in 0.417s
+
+OK (skipped=4)
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+ OK
+System check identified no issues (0 silenced).

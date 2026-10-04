@@ -1,0 +1,7 @@
+{% extends 'forum/base.html' %}{% load static %}
+{% block content %}<h1>Форум об искусственном интеллекте</h1>
+{% if countdown_target %}<p>До события: <time id="countdown" datetime="{{ countdown_target|date:'c' }}">{{ countdown_target }}</time></p>
+<script src="{% static 'forum/countdown.js' %}" defer></script>{% endif %}
+<h2>Три самых обсуждаемых топика</h2>
+{% for topic in topics %}<article><h3><a href="{% url 'topic' topic.pk %}">{{ topic.title }}</a></h3><p>Сообщений: {{ topic.message_count }}</p></article>
+{% empty %}<p>Пока нет обсуждений. Модератор может создать теги, а участник — первое обсуждение.</p>{% endfor %}{% endblock %}

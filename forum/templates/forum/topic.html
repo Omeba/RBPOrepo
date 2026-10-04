@@ -1,0 +1,13 @@
+{% extends 'forum/base.html' %}
+{% block title %}{{ topic.title }} · humAIn{% endblock %}
+{% block content %}<h1>{{ topic.title }}</h1><p>{{ topic.author.username }} · {{ topic.created_at }}</p>
+<div class="text">{{ topic.description|linebreaksbr }}</div>
+<p>{% for tag in topic.tags.all %}<span class="tag">{{ tag.name }}</span> {% endfor %}</p>
+{% if deletable %}<form method="post" action="{% url 'topic_delete' topic.pk %}">{% csrf_token %}<button>Удалить обсуждение со всеми сообщениями</button></form>{% endif %}
+<h2>Сообщения</h2>
+{% for message in page_obj %}<article><p><strong>{{ message.author.username }}</strong> · {{ message.created_at }}</p><div class="text">{{ message.text|linebreaksbr }}</div>
+{% if message.deletable %}<form method="post" action="{% url 'message_delete' message.pk %}">{% csrf_token %}<button>Удалить сообщение</button></form>{% endif %}</article>
+{% empty %}<p>Сообщений пока нет.</p>{% endfor %}
+{% include 'forum/pagination.html' %}
+{% if user.is_authenticated %}<h2>Ответить</h2><form method="post" action="{% url 'message_create' topic.pk %}">{% csrf_token %}{{ form.as_p }}<button>Опубликовать</button></form>
+{% else %}<p><a href="{% url 'login' %}">Войдите</a>, чтобы ответить.</p>{% endif %}{% endblock %}

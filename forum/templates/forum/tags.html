@@ -1,0 +1,5 @@
+{% extends 'forum/base.html' %}
+{% block content %}<h1>Теги</h1>{% for tag in tags %}<article><strong>{{ tag.name }}</strong> · {{ tag.author.username }}
+{% if tag.deletable %}<form class="inline" method="post" action="{% url 'tag_delete' tag.pk %}">{% csrf_token %}<button>Удалить тег</button></form>{% endif %}</article>
+{% empty %}<p>Тегов пока нет.</p>{% endfor %}
+{% if user.is_moderator %}<h2>Создать тег</h2><form method="post">{% csrf_token %}{{ form.as_p }}<button>Создать</button></form>{% endif %}{% endblock %}
